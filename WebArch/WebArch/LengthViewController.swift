@@ -10,6 +10,7 @@ import UIKit
 
 class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    @IBOutlet weak var convertButton: UIButton!
     @IBOutlet var inputField: UITextField!
     @IBOutlet var scroller: UIPickerView!
     @IBOutlet var output: UILabel!
@@ -17,14 +18,21 @@ class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     var input : String!
     var toUnit : String!
     var fromUnit : String!
+    @IBOutlet weak var firstBackground: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         toUnit = "yard"
         fromUnit = "yard"
+        
         scroller.selectRow(2, inComponent: 1, animated: true)
         scroller.selectRow(2, inComponent: 0, animated: true)
         var tap :UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         self.view.addGestureRecognizer(tap)
+        self.view.backgroundColor = UIColor(red: 0x67/255, green: 0x5A/255, blue: 0x57/255, alpha: 1.0)
+
+        self.firstBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -55,8 +63,13 @@ class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
     func pickerView(pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusingView view: UIView!) -> UIView {
         
         var label = UILabel()
-        var labelData = unit[row]
-        label.text = labelData
+        //var labelData = unit[row]
+//        label.text = labelData
+//        label.font = UIFont(name: "System", size: 80.0)
+        
+        let myTitle = NSAttributedString(string: unit[row], attributes: [NSFontAttributeName:UIFont(name: "Arial", size: 26.0)!,NSForegroundColorAttributeName:UIColor.blackColor()])
+        
+        //label.textColor = UIColor.blackColor()
         if component == 0
         {
             label.textAlignment = NSTextAlignment.Left
@@ -65,6 +78,8 @@ class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
         {
             label.textAlignment = NSTextAlignment.Right
         }
+        
+        label.attributedText = myTitle
         return label
     }
     
@@ -78,6 +93,12 @@ class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             fromUnit = unit[row]
         }
     }
+    
+    func pickerView(pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 30.0
+    }
+    
+
     
     
     
@@ -235,6 +256,14 @@ class LengthViewController: UIViewController, UIPickerViewDataSource, UIPickerVi
             
             
             
+        }
+        else
+        {
+            var alert = UIAlertView()
+            alert.title = "Input Invalid"
+            alert.message = "Field is Empty"
+            alert.addButtonWithTitle("Okay")
+            alert.show()
         }
         
         

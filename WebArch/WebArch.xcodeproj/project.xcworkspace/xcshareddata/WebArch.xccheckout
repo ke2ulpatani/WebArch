@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C1A4EA8A-A449-431C-94AA-EC165EE288DC</string>
+	<key>IDESourceControlProjectName</key>
+	<string>WebArch</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BA9976411FE4C76E6D73406BDCBE9901AAC5138C</key>
+		<string>https://github.com/ke2ulpatani/WebArch.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>WebArch/WebArch.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BA9976411FE4C76E6D73406BDCBE9901AAC5138C</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ke2ulpatani/WebArch.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BA9976411FE4C76E6D73406BDCBE9901AAC5138C</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BA9976411FE4C76E6D73406BDCBE9901AAC5138C</string>
+			<key>IDESourceControlWCCName</key>
+			<string>WebArch</string>
+		</dict>
+	</array>
+</dict>
+</plist>

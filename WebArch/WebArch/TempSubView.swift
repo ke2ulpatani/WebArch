@@ -21,7 +21,8 @@ class TempSubView: UIViewController, UITextFieldDelegate {
         self.tempLabel.text = speed
         self.tempUnit.text = unit[i!] /*"\u{00B0}"+*/
         self.tempLabel.delegate = TempViewController()
-        self.view.tag = 0
+//        self.tempLabel.accessibilityIdentifier = "textField"
+//        self.tempUnit.accessibilityIdentifier = "unit"
         
         
 

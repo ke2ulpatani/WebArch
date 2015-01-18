@@ -15,6 +15,9 @@ extension String {
 
 class SpeedViewController: UIViewController, UITextFieldDelegate, UIPickerViewDataSource,UIPickerViewDelegate{
 
+    @IBOutlet weak var firstBackground: UIView!
+    @IBOutlet weak var secondBackground: UIView!
+    
     @IBOutlet weak var unitLabelOne: UITextField!
     @IBOutlet weak var unitLabelTwo: UITextField!
    
@@ -32,6 +35,10 @@ class SpeedViewController: UIViewController, UITextFieldDelegate, UIPickerViewDa
         self.view.addGestureRecognizer(tap)
         scrollerOne.selectRow(1, inComponent: 0, animated: true)
         scrollerTwo.selectRow(1, inComponent: 0, animated: true)
+        self.view.backgroundColor = UIColor(red: 0x67/255, green: 0x5A/255, blue: 0x57/255, alpha: 1.0)
+        
+        self.firstBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        self.secondBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
         
         // Do any additional setup after loading the view, typically from a nib.
     }

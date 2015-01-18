@@ -10,6 +10,12 @@ import UIKit
 
 class BODHViewController: UIViewController, UITextFieldDelegate{
 
+    @IBOutlet weak var titleBackground: UIView!
+    @IBOutlet weak var binaryBackground: UIView!
+    @IBOutlet weak var decimalBackground: UIView!
+    @IBOutlet weak var hexDecimalBackground: UIView!
+    @IBOutlet weak var octalBackground: UIView!
+    
     @IBOutlet weak var binaryLabel: UITextField!
     @IBOutlet weak var decimalLabel: UITextField!
     @IBOutlet weak var hexadecimalLabel: UITextField!
@@ -42,8 +48,26 @@ class BODHViewController: UIViewController, UITextFieldDelegate{
       var keyboardNotification : NSNotificationCenter = NSNotificationCenter.defaultCenter()
         keyboardNotification.addObserver(self, selector: "keyboardWillShow", name: UIKeyboardWillShowNotification, object: nil)
         keyboardNotification.addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
-        self.view.backgroundColor = UIColor(red: 0x5C/255, green: 0xA0/255, blue: 0xEA/255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 0x41/255, green: 0x9D/255, blue: 0x78/255, alpha: 1.0)
+        //self.titleBackground.backgroundColor = nil
+        
+        addBlur(titleBackground)
+        addBlur(binaryBackground)
+        addBlur(decimalBackground)
+        addBlur(hexDecimalBackground)
+        addBlur(octalBackground)
+    
+        
         //Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    func addBlur(inputView :UIView)
+    {
+        var effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        var effectView = UIVisualEffectView(effect: effect)
+        effectView.frame = inputView.bounds
+        inputView.backgroundColor = nil
+        inputView.addSubview(effectView)
     }
     
    override func viewWillDisappear(animated: Bool) {
@@ -378,12 +402,16 @@ class BODHViewController: UIViewController, UITextFieldDelegate{
       UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.0, options: nil, animations: {
             self.binaryName.center.y -= CGFloat(40.0)
             self.binaryLabel.center.y -= CGFloat(40.0)
+            self.binaryBackground.center.y -= CGFloat(40.0)
             self.decimalName.center.y -= CGFloat(50.0)
             self.decimalLabel.center.y -= CGFloat(50.0)
+            self.decimalBackground.center.y -= CGFloat(50.0)
             self.hexadecimalName.center.y -= CGFloat(50.0)
             self.hexadecimalLabel.center.y -= CGFloat(50.0)
+            self.hexDecimalBackground.center.y -= CGFloat(50.0)
             self.octalName.center.y -= CGFloat(50.0)
             self.octalLabel.center.y -= CGFloat(50.0)
+            self.octalBackground.center.y -= CGFloat(50.0)
         }, completion: nil)
     }
     
@@ -393,12 +421,16 @@ class BODHViewController: UIViewController, UITextFieldDelegate{
         UIView.setAnimationDuration(0.5)
         self.binaryName.center.y += CGFloat(40.0)
         self.binaryLabel.center.y += CGFloat(40.0)
-        self.decimalName.center.y += CGFloat(40.0)
-        self.decimalLabel.center.y += CGFloat(40.0)
-        self.hexadecimalName.center.y += CGFloat(40.0)
-        self.hexadecimalLabel.center.y += CGFloat(40.0)
-        self.octalName.center.y += CGFloat(40.0)
-        self.octalLabel.center.y += CGFloat(40.0)
+        self.binaryBackground.center.y += CGFloat(40.0)
+        self.decimalName.center.y += CGFloat(50.0)
+        self.decimalLabel.center.y += CGFloat(50.0)
+        self.decimalBackground.center.y += CGFloat(50.0)
+        self.hexadecimalName.center.y += CGFloat(50.0)
+        self.hexadecimalLabel.center.y += CGFloat(50.0)
+        self.hexDecimalBackground.center.y += CGFloat(50.0)
+        self.octalName.center.y += CGFloat(50.0)
+        self.octalLabel.center.y += CGFloat(50.0)
+        self.octalBackground.center.y += CGFloat(50.0)
         UIView.commitAnimations()
     }
 

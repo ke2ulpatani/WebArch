@@ -17,6 +17,8 @@ class MassViewController: UIViewController, UITextFieldDelegate{
     @IBOutlet var textFieldOne: UITextField!
     @IBOutlet var textFieldTwo: UITextField!
     
+    
+    
     var unitOne : String!
     var unitTwo : String!
     override func viewDidLoad() {
@@ -25,6 +27,8 @@ class MassViewController: UIViewController, UITextFieldDelegate{
         self.view.addGestureRecognizer(tap)
         unitOne = "kg"
         unitTwo = "kg"
+        
+        self.view.backgroundColor = UIColor(red: 0x67/255, green: 0x5A/255, blue: 0x57/255, alpha: 1.0)
         // Do any additional setup after loading the view.
     }
 

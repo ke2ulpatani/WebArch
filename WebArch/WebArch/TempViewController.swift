@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TempViewController: UIViewController,UIPageViewControllerDataSource, UITextFieldDelegate, UIPageViewControllerDelegate{
+class TempViewController: UIViewController,UIPageViewControllerDataSource, UITextFieldDelegate, UIPageViewControllerDelegate {
 
     var unit = ["K","C","F"]
 
@@ -80,6 +80,7 @@ class TempViewController: UIViewController,UIPageViewControllerDataSource, UITex
         pageView.setViewControllers(subviewCollection, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         pageView.restorationIdentifier = "Upper"
         pageviewControllerUpper = pageView
+        addChildViewController(pageviewControllerUpper!)
         self.subViewUpper.addSubview(pageviewControllerUpper!.view)
         
         self.pageviewControllerUpper?.view.frame = self.subViewUpper.bounds
@@ -96,11 +97,14 @@ class TempViewController: UIViewController,UIPageViewControllerDataSource, UITex
         pageView.setViewControllers(subviewCollection, direction: UIPageViewControllerNavigationDirection.Forward, animated: false, completion: nil)
         pageView.restorationIdentifier = "Lower"
         pageviewControllerLower = pageView
+        addChildViewController(pageviewControllerLower!)
+        
         self.subViewDown.addSubview(pageviewControllerLower!.view)
-        self.subViewDown.addSubview(pageviewControllerLowe)
+        pageviewControllerLower?.didMoveToParentViewController(self)
+        
         self.pageviewControllerLower?.view.frame = self.subViewDown.bounds
         
-    }
+            }
     
     
     
@@ -366,102 +370,5 @@ class TempViewController: UIViewController,UIPageViewControllerDataSource, UITex
         return "Bakwaas"
     }
     
-    
-  /* func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if textField.restorationIdentifier == "UpperInput"
-        {
-            switch string {
-            case "0","1","2","3","4","5","6","7","8","9":
-                if textField.text.utf16Count == 19
-                {
-                    return false
-                }
-                
-                var str = convertUnit(textField.text + string, fromUnit: upperUnit, toUnit: lowerUnit)
-                
-                //var k = find(unit, lowerUnit)
-                //var viewTemp = getSubView(str, unit: k!, position: "Lower")
-                //var viewTemp = self.subViewDown.viewWithTag(0)
-                //viewTemp.
-                //subViewDown.addSubview(viewTemp.view)
-                return true
-            case ".":
-                if textField.text.utf16Count == 19
-                {
-                    return false
-                }
-                let array = Array(textField.text)
-                var decimalCount = 0
-                for character in array {
-                    if character == "." {
-                        decimalCount++
-                    }
-                }
-                
-                if decimalCount == 1 {
-                    return false
-                } else {
-                    return true
-                }
-            default:
-                if textField.text.utf16Count >= 2
-                { (textField.text.substringToIndex(textField.text.endIndex.predecessor())).toInt()!
-                    
-                    return true
-                }
-                else
-                {
-                    unitLabelTwo.text = ""
-                    return true
-                }
-            }
-        }
-        
-        if textField.restorationIdentifier == "labelTwo"
-        {
-            switch string {
-            case "0","1","2","3","4","5","6","7","8","9":
-                if textField.text.utf16Count == 19
-                {
-                    return false
-                }
-                unitLabelOne.text = convertUnit(textField.text + string, fromUnit: speedUnitTwo, toUnit: speedUnitOne)
-                return true
-            case ".":
-                if textField.text.utf16Count == 19
-                {
-                    return false
-                }
-                let array = Array(textField.text)
-                var decimalCount = 0
-                for character in array {
-                    if character == "." {
-                        decimalCount++
-                    }
-                }
-                
-                if decimalCount == 1 {
-                    return false
-                } else {
-                    return true
-                }
-            default:
-                if textField.text.utf16Count >= 2
-                { (textField.text.substringToIndex(textField.text.endIndex.predecessor())).toInt()!
-                    
-                    return true
-                }
-                else
-                {
-                    unitLabelOne.text = ""
-                    return true
-                }
-            }
-        }
-        
-        return false
-        
-    }
-    */
-    
+
 }

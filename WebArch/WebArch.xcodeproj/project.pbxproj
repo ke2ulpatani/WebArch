@@ -10,6 +10,7 @@
 		7B06466A1A57F66A00B236DA /* TempSubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B0646691A57F66A00B236DA /* TempSubView.swift */; };
 		7B4A345F1A65A5A6007F79C0 /* TempViewController_Final.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B4A345E1A65A5A6007F79C0 /* TempViewController_Final.swift */; };
 		7BD5ECEC1A5D7E5600C67B93 /* TempViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD5ECEB1A5D7E5600C67B93 /* TempViewController.swift */; };
+		7BD907E71A6ABE1F0012A7EB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BD907E61A6ABE1F0012A7EB /* CustomCell.swift */; };
 		7BE210EA1A48862500D6D6C5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE210E91A48862500D6D6C5 /* AppDelegate.swift */; };
 		7BE210EC1A48862500D6D6C5 /* BODHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE210EB1A48862500D6D6C5 /* BODHViewController.swift */; };
 		7BE210EE1A48862500D6D6C5 /* SpeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BE210ED1A48862500D6D6C5 /* SpeedViewController.swift */; };
@@ -35,6 +36,7 @@
 		7B0646691A57F66A00B236DA /* TempSubView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempSubView.swift; sourceTree = "<group>"; };
 		7B4A345E1A65A5A6007F79C0 /* TempViewController_Final.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController_Final.swift; sourceTree = "<group>"; };
 		7BD5ECEB1A5D7E5600C67B93 /* TempViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempViewController.swift; sourceTree = "<group>"; };
+		7BD907E61A6ABE1F0012A7EB /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		7BE210E41A48862500D6D6C5 /* WebArch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WebArch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE210E81A48862500D6D6C5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BE210E91A48862500D6D6C5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				7BE210F41A48862500D6D6C5 /* LaunchScreen.xib */,
 				7BE210E71A48862500D6D6C5 /* Supporting Files */,
 				7B4A345E1A65A5A6007F79C0 /* TempViewController_Final.swift */,
+				7BD907E61A6ABE1F0012A7EB /* CustomCell.swift */,
 			);
 			path = WebArch;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				7BE2110E1A48962F00D6D6C5 /* MassViewController.swift in Sources */,
 				7BD5ECEC1A5D7E5600C67B93 /* TempViewController.swift in Sources */,
 				7B06466A1A57F66A00B236DA /* TempSubView.swift in Sources */,
+				7BD907E71A6ABE1F0012A7EB /* CustomCell.swift in Sources */,
 				7BE210EE1A48862500D6D6C5 /* SpeedViewController.swift in Sources */,
 				7BE210EA1A48862500D6D6C5 /* AppDelegate.swift in Sources */,
 				7BE210EC1A48862500D6D6C5 /* BODHViewController.swift in Sources */,
