@@ -48,14 +48,18 @@ class BODHViewController: UIViewController, UITextFieldDelegate{
       var keyboardNotification : NSNotificationCenter = NSNotificationCenter.defaultCenter()
         keyboardNotification.addObserver(self, selector: "keyboardWillShow", name: UIKeyboardWillShowNotification, object: nil)
         keyboardNotification.addObserver(self, selector: "keyboardWillHide", name: UIKeyboardWillHideNotification, object: nil)
-        self.view.backgroundColor = UIColor(red: 0x41/255, green: 0x9D/255, blue: 0x78/255, alpha: 1.0)
+        self.view.backgroundColor = UIColor(red: 0x67/255, green: 0x5A/255, blue: 0x57/255, alpha: 1.0)
         //self.titleBackground.backgroundColor = nil
-        
-        addBlur(titleBackground)
-        addBlur(binaryBackground)
-        addBlur(decimalBackground)
-        addBlur(hexDecimalBackground)
-        addBlur(octalBackground)
+        self.titleBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        self.binaryBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        self.decimalBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        self.hexDecimalBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+        self.octalBackground.backgroundColor = UIColor(red: 0x4F/255, green: 0x9A/255, blue: 0xEA/255, alpha: 1.0)
+//        addBlur(titleBackground)
+//        addBlur(binaryBackground)
+//        addBlur(decimalBackground)
+//        addBlur(hexDecimalBackground)
+//        addBlur(octalBackground)
     
         
         //Do any additional setup after loading the view, typically from a nib.
